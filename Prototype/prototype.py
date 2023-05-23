@@ -1,6 +1,7 @@
 from abc import ABC
 import copy
 
+
 class Car:
     __model: str = ''
     __params: dict = {'Мотор': 'V8', 'Вес': 1420, 'Разгон': 4.3}
@@ -9,8 +10,6 @@ class Car:
         if donor is not None:
             self.__model = donor.get_model()
             self.__params = copy.deepcopy(donor.get_params())
-
-
 
     def set_model(self, model: str):
         self.__model = model
